@@ -52,9 +52,10 @@ const Nav = () => {
   };
 
     return (
-        <div className='w-full flex justify-center items-center flex-col'>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className="border-none">
-  <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        <div className='w-full relative '>
+                <div className='w-full h-[20vh] bg-white flex justify-between items-center gap-5  absolute top-[-10vh] skew-y-6'></div>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className="border-none mt-20">
+  <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" className='mx-auto w-fit'>
     <Tab label="All" {...a11yProps(0)} />
     <Tab label="Photos" {...a11yProps(1)} />
     <Tab label="Videos" {...a11yProps(2)} />
@@ -93,6 +94,7 @@ const Nav = () => {
       navigation
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
+      
     >
     {[1,2,3,4,5,6,7,8].map(item=>{
         return       <SwiperSlide key={item} className='h-[200px]'>

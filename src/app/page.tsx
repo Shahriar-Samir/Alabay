@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import Nav from './components/nav';
+import ProjectVision from './components/ProjectVision';
+import Roadmap from './components/Roadmap';
 
 const page = () => {
   return (
@@ -18,7 +20,7 @@ const Scroll = () => {
   return (
     <main className='w-11/12 h-[90vh] overflow-y-scroll '>
       <section className='w-full h-[100vh] bg-transparent'></section>
-      <section className='w-full h-[100vh] bg-[#febe00] flex justify-between items-center gap-5 relative'>
+      <section className='w-full h-[140vh] bg-[#febe00] flex justify-between items-center gap-5 relative'>
         <figure className='w-1/2'>
         <img src='/history.png' className='w-full object-cover' />
         </figure>
@@ -26,10 +28,11 @@ const Scroll = () => {
         <h1 className='text-end'><span className='font-Montserrat font-black text-6xl text-[#F76902D1]'>History of</span> <br/> <br/><span className='text-9xl font-cheese font-extrabold text-white'>Alabay</span></h1>
         <p className='text-end font-kumbh font-bold text-3xl mt-10'>The Central Asian Shepherd Dog, also known as Alabay, has been a guardian of livestock and property for centuries. Originating from Central Asia, these dogs are renowned for their courage, strength, and loyalty.</p>
         </section>
-        <div className='w-full h-[20vh] bg-[#febe00] flex justify-between items-center gap-5  absolute bottom-[-10vh] skew-y-6'></div>
       </section>
-      <section className='bg-white h-[100vh] w-full flex justify-center'>
+      <section className='bg-white w-full flex justify-center flex-col'>
          <Nav/>
+         <ProjectVision/>
+         <Roadmap/>
       </section>
     </main>
   );
